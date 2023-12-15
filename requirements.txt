@@ -1,0 +1,9 @@
+bs4
+requests
+selenium
+sqlalchemy
+psycopg2
+flask
+string
+random
+asyncio
