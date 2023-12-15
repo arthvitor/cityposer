@@ -1,0 +1,226 @@
+/* Importando tipografias */
+@import url("https://use.typekit.net/boc1mia.css");
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body do projeto */
+body {
+    background: #E27883;
+}
+
+/* header - PRECISA CRIAR EVENTO */
+header {
+    display: flex;
+    background: #000;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    z-index: 1;
+    opacity: 0;
+    justify-content: center;
+} 
+
+.header-visible {
+    transition: visibility 0s, opacity 0.5s ease;
+    visibility: visible;
+    opacity: 1;
+}
+
+#header-title-intro {
+    font-family: "pf-grand-gothik-variable",sans-serif;
+    font-variation-settings: 'wdth' 150, 'wght' 700, 'ital' 1;
+    font-size: 250%;
+    color: white;
+    margin-top: 5%;
+
+}
+
+/* Main - Parte principal */
+main {
+    margin: 0% 10% 0% 10%;
+}
+
+.img-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#capa-intro {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#title-intro {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    color: white;
+    font-family: "pf-grand-gothik-variable",sans-serif;
+    font-variation-settings: 'wdth' 150, 'wght' 700, 'ital' 1;
+    font-size: 500%;
+    @media (max-width:750px) {
+        font-size: 400%;
+    }
+}
+
+#subtitle-intro {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    color: white;
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 110%;
+    @media (max-width:750px) {
+        font-size: 110%;
+    }
+}
+
+/* Formulário - Intro */
+.search-intro {
+    position: absolute;
+    z-index: 1;
+    top:60%;
+    width: 50vw;
+    height: 8vw;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#searchTxt-intro {
+    color: white;
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 150%;
+}
+
+#search-box-intro {
+    width: 40vw;
+    height: 5vh;
+    border-radius: 50px;
+    border: none;
+    background-color: white;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#artist-name {
+    width: 38vw;
+    height: 5vh;
+    border-radius: 50px;
+    border: none;
+    background: none;
+    margin-bottom: 10px;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 100;
+}
+
+#artist-name:focus{
+    outline: none;
+}
+
+#button-search {
+    width: 5vw;
+    padding: 0.9%;
+    border-radius: 80px;
+    border: none;
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    background: white;
+}
+
+#button-search:hover {
+    background: grey;
+    cursor: pointer;
+}
+
+/* Corpo da página */
+.txt-intro {
+    margin: 5% 10% 0% 10%;
+}
+
+h2.title-txt-intro {
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 200%;
+    margin-bottom: 1vh;
+}
+
+.txt-intro p {
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 150%;
+    margin-bottom: 5%;
+}
+
+/* Footer - final da página */
+footer {
+    margin-top: 3%;
+    display: flex;
+    background: black;
+    width: 100%;
+    height: auto;
+}
+
+footer h2 {
+    color: white;
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 200%;
+    margin: 5% 0% 2% 18%;
+}
+
+footer p {
+    color: white;
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 150%;
+    margin: 2% 18% 4% 18%;
+}
+
+/* Mensagem de erro por busca incorreta */
+.flash-messages-error {
+    display: flex;
+    width: 31vw;
+    color: white;
+    background: #E27883;
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100; 
+    font-size: 150%;
+    margin: 3% 0% 0% 0%;
+    justify-content: center;
+    border-radius: 30px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.flash-messages-error.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
