@@ -1,0 +1,196 @@
+/* Importando tipografias */
+@import url("https://use.typekit.net/boc1mia.css");
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body do projeto */
+body {
+    background: #E27883;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* header - PRECISA CRIAR EVENTO */
+header {
+    height: 10vh; /* Ou qualquer altura desejada */
+    display: flex;
+    background: #000;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    z-index: 2;
+    justify-content: center;
+} 
+
+#header-title-intro {
+    font-family: "pf-grand-gothik-variable",sans-serif;
+    font-variation-settings: 'wdth' 150, 'wght' 700, 'ital' 1;
+    font-size: 250%;
+    color: white;
+    margin-top: 5%;
+}
+
+#link-home-search {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main - Parte principal */
+main {
+    margin: 8% 10% 10% 10%;
+    z-index: 1;
+    position: relative;
+}
+
+.quiz-cityposer {
+    height: 100%;
+    position: relative; /* Adicione esta linha para garantir que o position:relative funcione corretamente */
+    z-index: 0; /* Defina o z-index para um valor menor */
+    overflow: hidden;
+}
+
+.question-container {
+    width: 100%; /* Ajusta a largura da pergunta para 100% do contêiner pai */
+    transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave de opacidade */
+}
+
+.question-container h1 {
+    font-family: "pf-grand-gothik-variable",sans-serif;
+    font-variation-settings: 'wdth' 150, 'wght' 700, 'ital' 1;
+    font-size: 250%;
+    word-wrap: break-word; /* Adiciona quebra de linha em palavras longas */
+}
+
+.question-container p {
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 200%;
+}
+
+/* Swiper específico */
+.swiper-container {
+    height: auto; /* Alterado para 'auto' para ajustar dinamicamente à altura do conteúdo */
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap; /* Adiciona quebra de linha para as opções */
+}
+
+.quiz-option {
+    padding: 0.9%;
+    border-radius: 80px;
+    border: none;
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    background: white;
+    margin-right: 5px;
+    margin-top: 3%;
+    width: calc(20% - 5px); /* Calcula a largura para incluir a margem direita */
+}
+
+#result-container {
+    background: lightgrey;
+    border-radius: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 100%;
+    width: auto;
+    transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave de opacidade */
+    display: none; /* Inicialmente oculto */
+}
+
+#next-question-btn {
+    padding: 0.9%;
+    border-radius: 80px;
+    border: none;
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: white;
+    background: black;
+    margin-right: 5px;
+    margin-top: 3%;
+    width: calc(20% - 5px); /* Calcula a largura para incluir a margem direita */
+}
+
+.loader {
+    font-family: "pf-grand-gothik-variable", sans-serif;
+    font-variation-settings: 'wdth' 150, 'wght' 700, 'ital' 1;
+    font-size: 150%;
+    color: white;
+    margin-right: 40%;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+} 
+
+.type-animation {
+    animation: blinkCursor 500ms steps(40) infinite normal,
+    typing 4s steps(40) 1s normal both;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 26.2em;
+    }
+}
+
+@keyframes blinkCursor{
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+#result-container p{
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.swiper-backface-hidden .swiper-slide p {
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 10px;
+    font-size: 150%;
+}
+
+.backhome {
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    margin-left: 10px;
+    font-size: 100%;
+}
+
+#result-container {
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-select-none .svg-container {
+    width: 700px;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+
+}
