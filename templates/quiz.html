@@ -1,0 +1,39 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_style.css')}}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Cityposer</title>
+</head>
+<body>
+    <header>
+        <div class="header-intro">
+            <h1 id="header-title-intro"><a href="/" id="link-home-search">CITYPOSER</a></h1>
+        </div>
+    </header>
+    <main>
+        <div class="loader type-animation">
+            <p>Aguarde um pouquinho. Já vai começar...</p>
+        </div>
+        <div class="quiz-cityposer">
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="quiz-wrapper">
+                  <!-- Slides will be dynamically added here -->
+                </div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <div id="result-container" style="display: none;">sssssss</div>
+        <button id="next-question-btn" style="display: none;">Próxima Pergunta</button>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{url_for('static', filename='js/quiz_script.js')}}"></script>
+</body>
+</html>

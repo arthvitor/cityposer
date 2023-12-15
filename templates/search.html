@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/search_style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+    <title>Busca - Cityposer</title>
+    <script src="{{ url_for('static', filename='js/loader.js')}}"></script>
+    <script>let artistDataJson = {{ show_data_json | safe }};</script>
+</head>
+<body>
+    <header>
+        <div class="header-intro">
+            <h1 id="header-title-intro"><a href="/" id="link-home-search">CITYPOSER</a></h1>
+        </div>
+    </header>
+    <main>
+        <div class="search-result">
+            <h1>Qual desses artistas é o seu?</h1>
+            <div class="populate-result-search"></div>
+        </div>
+        <div id="loader" style="display: none;">
+            <!-- Adicione aqui o HTML do seu loader -->
+            <p>Um momentinho...</p>
+        </div>    
+    </main>
+    <footer>
+        <div class="footer-intro">
+            <h2>Sobre mim</h2>
+            <p>O projeto foi desenvolvido por Vitor Arthur, um (futuro) jornalista de dados que desenvolveu esse trabalho como TCC do curso de Jornalismo de Dados, Automação e Data Storytelling do Insper.</p>
+            <p>Versão: 1.0.0.</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+    <script src="{{ url_for('static', filename='js/search_script.js')}}"></script>
+</body>
+</html>
